@@ -106,13 +106,13 @@ def q11
       sport.each do |sp|
         if list.include?(sp)
         else
-          list.push(sp)
+          list << sp
         end
       end
     else
       if list.include?(sport)
       else
-        list.push(sport)
+        list << sport
       end
     end
   end
