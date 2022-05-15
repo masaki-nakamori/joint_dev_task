@@ -161,6 +161,21 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  attr_accessor :name, :age, :gender
+
+  def initialize(name:, age:, gender:)
+    @name = name
+    @age = age
+    @gender = gender
+  end
+
+  def info
+    puts <<~text
+    名前:#{name}
+    年齢:#{age}
+    性別:#{gender}
+    text
+  end
 
 end
 
@@ -176,6 +191,20 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  attr_reader :name, :age
+
+  def initialize(name:,age:)
+    @name = name
+    @age = age
+  end
+
+  def introduce
+    if age >= 20
+      return "こんにちは，#{name}と申します。宜しくお願いいたします。"
+    else
+      return "はいさいまいど〜，#{name}です!!!"
+    end
+  end
 
 end
 
